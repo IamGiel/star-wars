@@ -1,0 +1,74 @@
+
+
+
+body {
+	padding:216px;
+	height:500px;
+	margin-top: -15%;
+    
+    background: url("../images/darthWallPaper.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+img {
+    height: 100%;
+}
+
+h1, h2, p, #selectYourCharacter, #selectYourOpponent {
+    color:white;
+}
+
+#selectYourCharacter, #selectYourOpponent {
+    color:white;
+    font-size: 20px;
+}
+
+img#darth, img#villain, img#luke, img#jedi {
+	height: 90px;
+    width: 86px;
+}
+
+.thumbnail {
+	border-color: teal;
+    background-color: lightgray;
+    width: 168px;
+    float: none;
+    height: 150px;
+    width: 104px;
+
+}
+button, #clicker1 {
+    color: yellow;
+    background-color: #b53f3f;
+    height: 27px;
+    position: relative;
+    top: -8px;
+}
+
+#whosBattle, #battleUpdate {
+    
+    border-width: 2px;
+    color: #b53f3f;
+    height: 27px;
+    color:white;
+}
+
+#Banner1, #Banner2, #Banner3, #Banner4, #OpBanner1, #OpBanner2, #OpBanner3, #OpBanner4  {
+	color:white;
+}
+
+a {
+    height: 209px;
+}	
+
+.life1, .life2, .life3, .life4 {
+	color:white;
+}
+
+.col-md-3 {
+    width: 17%;
+}
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Star Wars Game</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+
+	
+<h1 id="title">Star Wars RPG</h1>
+<button id="start">Start</button>
+<button id="reset">Reset</button>
+
+
+
+<hr>
+<h2 id="whosBattle"></h2>
+<h2 id="battleUpdate"></h2>
+<br><br>
+<label id="selectYourCharacter"></label>
+<!-- Game Start: 4 blocks on first row -->
+<div class="row">
+
+<!-- col -->
+    <div class="col-md-3">
+      <h3 id="Banner1"></h3><h3 id="OpBanner1"></h3>
+	    <a href="#" class="thumbnail r1 x1" id="character1"> 
+        <p class="life1"></p><button id="clicker1">battle</button>
+
+    </a>
+  	</div>
+    
+<!-- col -->
+  	<div class="col-md-3">
+      <h3 id="Banner2"></h3><h3 id="OpBanner2"></h3>
+  		<a href="#" class="thumbnail r1 x2" id="character2">
+       <p class="life2"></p><button id="clicker2">battle</button>
+    </a>
+	</div>
+  
+ <!-- col -->
+    <div class="col-md-3">
+      <h3 id="Banner3"></h3><h3 id="OpBanner3"></h3>
+      <a href="#" class="thumbnail r1 x3" id="character3">
+       <p class="life3"></p><button id="clicker3">battle</button>
+    </a>
+  </div>
+
+ <!-- col -->
+  <div class="col-md-3"> 
+    <h3 id="Banner4"></h3><h3 id="OpBanner4"></h3>
+     <a href="#" class="thumbnail r1 x4" id="character4">
+      <p class="life4"></p><button id="clicker4">battle</button>
+     </a>  
+  </div>
+
+</div>
+<hr>
+  <label id="selectYourOpponent">Select Opponent:</label>
+
+<!-- Character NOT chosen-->
+
+<div class="row">
+<!-- col -->
+    <div class="col-md-3"><!--second -->
+      <a href="#" class="thumbnail r2" id="notChosen1"> 
+        <p class="life1"></p>
+    </a>
+    </div>
+<!-- col -->
+    <div class="col-md-3"><!--third -->
+      <a href="#" class="thumbnail r2" id="notChosen2"> 
+        <p class="life2"></p>
+    </a>
+    </div>
+ <!-- col -->
+    <div class="col-md-3"><!--fourth -->
+      <a href="#" class="thumbnail r2" id="notChosen3"> 
+        <p class="life3"></p>
+    </a>
+    </div>
+
+ <!-- col -->
+    <div class="col-md-3"> <!-- space -->
+      <a href="#" class="thumbnail r2" id="notChosen4"> 
+        <p class="life4"></p>
+    </a>
+  </div>
+
+</div>
+
+<hr>
+<!-- Row for Defener -->
+
+<div class="row" id="parentDiv">
+  <h3 id="defender"></h3>
+<!-- col -->
+  <div class="col-md-3"><!--first -->
+    
+    <a href="#" class="thumbnail" id="opponentSection1"> 
+        <p class="life1"></p><br>
+    </a>
+  </div>
+<!-- col -->
+  <div class="col-md-3"><!--first -->
+    
+    <a href="#" class="thumbnail" id="opponentSection2"> 
+        <p class="life2"></p>
+    </a>
+  </div>
+<!-- col -->
+  <div class="col-md-3"><!--first -->
+    
+    <a href="#" class="thumbnail" id="opponentSection3"> 
+        <p class="life3"></p>
+    </a>
+  </div>
+<!-- col -->
+  <div class="col-md-3"><!--first -->
+     
+     <a href="#" class="thumbnail" id="opponentSection4"> 
+        <p class="life4"></p>
+    </a>
+  </div>
+
+</div>
+
+<script src="assets/javascript/game.js"></script>
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
