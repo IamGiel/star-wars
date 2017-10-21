@@ -5,7 +5,7 @@ jediAttack = 0;
 lukeAttack = 0;
 villainAttack = 0;
 // set variables, each character will get a life value
-var char1Life = " hp: " + 200 + "<br>" + "Attack Points = " + darthAttack;
+var char1Life = " hp: " + 200 + "<br>" + "Attack Points = " + darthAttack;//is there a better way to code this? What would a pro developer do?
 var char2Life = " hp: " + 180 + "<br>" + "Attack Points = " + jediAttack;
 var char3Life = " hp: " + 150 + "<br>" + "Attack Points = " + lukeAttack;
 var char4Life = " hp: " + 120 + "<br>" + "Attack Points = " + villainAttack;
@@ -20,7 +20,7 @@ var villain = '<img id="villain" class="life4" src="assets/images/villain.jpg" /
 
 	//row1
 	
-	var r1col1 = $("#character1").prepend(darth);
+	var r1col1 = $("#character1").prepend(darth);//want to know how a professional would code these repeated codes...
 	$(".life1").html("HP:  " + char1Life);
 
 	var r1col2 = $("#character2").prepend(jedi);
@@ -62,7 +62,8 @@ var villain = '<img id="villain" class="life4" src="assets/images/villain.jpg" /
 	$(".life4").html(char4Life);
 
 	$("#selectYourCharacter").text("Select Your Character");
-	
+
+	//tried looping to avoid repeated codes...
 	var rowsAndCols = [r1col1, r1col2, r1col3, r1col4, r2col1, r2col2, r2col3, r2col3, r2col4, r3col1, r3col2, r3col3, r3col4];
 
 	function onload() {
@@ -81,7 +82,7 @@ var villain = '<img id="villain" class="life4" src="assets/images/villain.jpg" /
 		$("#selectYourCharacter").hide();
 		$("#selectYourOpponent").hide();
 
-		$("#Banner1").text("You Selected: ").hide();
+		$("#Banner1").text("You Selected: ").hide();//want to know the best practice for repeated codes like this ones... syntax wise
 		$("#Banner2").text("You Selected: ").hide();
 		$("#Banner3").text("You Selected: ").hide();
 		$("#Banner4").text("You Selected: ").hide();
@@ -105,11 +106,11 @@ var villain = '<img id="villain" class="life4" src="assets/images/villain.jpg" /
 		
 
 $("#reset").on("click", function(){		
-	location.reload();
-});
+	location.reload();//for sone reason, when I did the reset, the thumbnail couldnt be clicked.  I tried to reverse it (off.click, onClick etc...)
+});					  //since it wont work, I just reload the page, no score to keep track anyway (unlike the crystals homework...)
 
 function setScores(){
-		var char1Life = 200;
+		var char1Life = 200;//repeated this for satisfy scope rules here
 		var char2Life = 180;
 		var char3Life = 150;
 		var char4Life = 120;
@@ -123,13 +124,13 @@ $("#start").on("click", function(){//on start
 	for (var i = 0; i < rowsAndCols.length; i++) {
 			test = rowsAndCols[i];
 
-			rowsAndCols[0].show();
+			rowsAndCols[0].show();//i tried rowsAndCols[i].show(); and it wont work...
 			rowsAndCols[1].show();
 			rowsAndCols[2].show();
 			rowsAndCols[3].show();
 
 
-			var optionDarth = false;
+			var optionDarth = false;//to mark the characters matched - will be turned TRUE, when need to call each:
 			var optionJedi = false;
 			var optionLuke = false;
 			var optionVillain = false;
@@ -138,7 +139,7 @@ $("#start").on("click", function(){//on start
 			var redLuke = false;
 			var redVillain = false;
 
-		$("#selectYourCharacter").show();
+		$("#selectYourCharacter").show();//tell user
 		
 		console.log(setScores);
 	}
@@ -149,10 +150,10 @@ var optionJedi = false;
 var optionLuke = false;
 var optionVillain = false;
 
-//choosing your character -------------------------------------------------------------//
+//choosing your character -------------------------------------------------------------//blues
 $("#character1").on("click", function() { 
-	$("#character1").off("click");
-	r1col2.hide();
+	$("#character1").off("click");//prevent clicking on it again
+	r1col2.hide();//hide characters not needed
 	r1col3.hide();
 	r1col4.hide();
 	$("#selectYourOpponent").show();
@@ -160,12 +161,12 @@ $("#character1").on("click", function() {
 	$(this).css('background', '#3a66b2');
 
 
-	r2col1.hide();
+	r2col1.hide();//thinking of a loop reference here but maybe it would be the same tedious repetition.  This will work easily now.
 	r2col2.show();
 	r2col3.show();
 	r2col4.show();
 
-	optionDarth = true;
+	optionDarth = true;//calling markers (false is activated)
 	if (optionDarth = true){
 		alert("You have chosen Darth");
 	} else { alert("darth is false"); }
@@ -242,7 +243,7 @@ $("#character4").on("click", function() {
 	
 });
 
-// choosing opponent row  -------------------------------------------------------//
+// choosing opponent row  -------------------------------------------------------//reds
 var redDarth = false;
 var redJedi = false;
 var redLuke = false;
@@ -359,7 +360,7 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 
 
 
-	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);
+	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);//these will satisfy #clicker1
 	$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack);
 	$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack);
 	$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack);
@@ -491,7 +492,7 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 
 $("#clicker2").on("click", function() { //defender jedi ------------------------
 
-	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);
+	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);// these codes for clicker2
 	$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack);
 	$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack);
 	$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack);
@@ -633,7 +634,7 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 
 $("#clicker3").on("click", function() { //defender luke ------------------------
 
-	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);
+	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);//these codes for clicker3
 	$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack);
 	$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack);
 	$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack);
@@ -769,7 +770,7 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 
 $("#clicker4").on("click", function() { //defender villain ------------------------
 
-	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);
+	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);//these codes for clicker4
 	$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack);
 	$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack);
 	$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack);
@@ -900,7 +901,7 @@ if ((redVillain == true) && (optionLuke == true)) {
 	}
 });
 
-
+	defender
 	//if charlife = 0; fade out the card make it disappear
 	
 
