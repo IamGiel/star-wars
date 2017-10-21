@@ -87,10 +87,10 @@ var villain = '<img id="villain" class="life4" src="assets/images/villain.jpg" /
 		$("#Banner3").text("You Selected: ").hide();
 		$("#Banner4").text("You Selected: ").hide();
 
-		$("#OpBanner1").text("Click to attack").hide();
-		$("#OpBanner2").text("Click to attack").hide();
-		$("#OpBanner3").text("Click to attack").hide();
-		$("#OpBanner4").text("Click to attack").hide();
+		$("#OpBanner1").text("Click Battle").hide();
+		$("#OpBanner2").text("Click Battle").hide();
+		$("#OpBanner3").text("Click Battle").hide();
+		$("#OpBanner4").text("Click Battle").hide();
 		$(".r1").css('background', 'teal')
 		$("#clicker1").hide();
 		$("#clicker2").hide();
