@@ -27,18 +27,17 @@ h1, h2, p, #selectYourCharacter, #selectYourOpponent {
 }
 
 img#darth, img#villain, img#luke, img#jedi {
-	height: 90px;
-    width: 86px;
+	height: 85px;
+    width: 123px;
 }
 
 .thumbnail {
-	border-color: teal;
+    border-color: teal;
     background-color: lightgray;
     width: 168px;
     float: none;
-    height: 150px;
-    width: 104px;
-
+    height: 168px;
+    width: 142px;
 }
 button, #clicker1 {
     color: yellow;
