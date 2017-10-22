@@ -1,19 +1,23 @@
 
+//remove counter attacks from defender displays
 
-darthAttack = 2;
-jediAttack = 3;
-lukeAttack = 4;
-villainAttack = 4;
+
+
 char1Life = 200;
 char2Life = 180;
 char3Life = 150;
 char4Life = 120;
 
+//I decided that each round of play, counter attacks will change to make the game interesting.
+var darthCounter = Math.floor(Math.random() * 20) + 1;
+var	jediCounter = Math.floor(Math.random() * 20) + 1;
+var lukeCounter = Math.floor(Math.random() * 20) + 1;
+var villainCounter = Math.floor(Math.random() * 20) + 1;
 
-var darthCounter = Math.floor(Math.random() * 27) + 4;
-var	jediCounter = Math.floor(Math.random() * 16) + 6;
-var lukeCounter = Math.floor(Math.random() * 26) + 3;
-var villainCounter = Math.floor(Math.random() * 15) + 2;
+var darthAttack = Math.floor(Math.random() * 6) + 1;
+var jediAttack = Math.floor(Math.random() * 6) + 1;
+var lukeAttack = Math.floor(Math.random() * 6) + 1;
+var villainAttack = Math.floor(Math.random() * 6) + 1;
 
 
 
@@ -388,10 +392,10 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 
 
 				
-		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + darthCounter);//these will satisfy #clicker1
-		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack + "<br>" + "Counter Attack = " + jediCounter);
-		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack + "<br>" + "Counter Attack = " + lukeCounter);
-		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack + "<br>" + "Counter Attack = " + villainCounter);
+		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + "--" + "<br>" + "Counter Attack = " + darthCounter);//these will satisfy #clicker1
+		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack + "<br>" + "Counter Attack = " + "--");
+		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack + "<br>" + "Counter Attack = " + "--");
+		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack + "<br>" + "Counter Attack = " + "--");
 
 
 	
@@ -536,10 +540,10 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 $("#clicker2").on("click", function() { //defender jedi ------------------------
 
 				
-		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + darthCounter);//these will satisfy #clicker1
-		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack + "<br>" + "Counter Attack = " + jediCounter);
-		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack + "<br>" + "Counter Attack = " + lukeCounter);
-		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack + "<br>" + "Counter Attack = " + villainCounter);
+		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + "--");//these will satisfy #clicker1
+		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + "--" + "<br>" + "Counter Attack = " + jediCounter);
+		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack + "<br>" + "Counter Attack = " + "--");
+		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack + "<br>" + "Counter Attack = " + "--");
 
 
 	//chosen darth
@@ -686,10 +690,10 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 
 			
 				
-		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + darthCounter);//these will satisfy #clicker1
-		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack + "<br>" + "Counter Attack = " + jediCounter);
-		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack + "<br>" + "Counter Attack = " + lukeCounter);
-		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack + "<br>" + "Counter Attack = " + villainCounter);
+		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + "--");//these will satisfy #clicker1
+		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack + "<br>" + "Counter Attack = " + "--");
+		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + "--" + "<br>" + "Counter Attack = " + lukeCounter);
+		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack + "<br>" + "Counter Attack = " + "--");
 
 	//chosen darth
 	
@@ -827,10 +831,10 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 
 	
 				
-		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + darthCounter);//these will satisfy #clicker1
-		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack + "<br>" + "Counter Attack = " + jediCounter);
-		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack + "<br>" + "Counter Attack = " + lukeCounter);
-		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack + "<br>" + "Counter Attack = " + villainCounter);
+		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + "--");//these will satisfy #clicker1
+		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack + "<br>" + "Counter Attack = " + "--");
+		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack + "<br>" + "Counter Attack = " + "--");
+		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + "--" + "<br>" + "Counter Attack = " + villainCounter);
 
 
 	//chosen darth
