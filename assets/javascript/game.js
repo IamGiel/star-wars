@@ -370,6 +370,7 @@ console.log(darthAttack);
 
 $("#clicker1").on("click", function() { //defender darth ------------------------
 
+		$("#whosBattle").html("Battle in progress... jedi vs darth");
 
 
 	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);//these will satisfy #clicker1
@@ -410,8 +411,8 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 		if (char2Life <= 0) {//jedi
 			$(r1col2).hide(3000);
 			$("#clicker1").off("click");
-			$("#battleUpdate").replaceWith("<h2>" + "Click Reset to play again." + "</h2>");
-			$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+			$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+			$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 			r2col3.hide();//hide other characters
 			r2col4.hide();
 			optionJedi = false;
@@ -419,8 +420,8 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 		if (char1Life <= 0) {//defender with clicker
 			$(r1col1).hide(3000);
 			$("#clicker1").off("click");
-			$("#battleUpdate").replaceWith("<h2>" + "Well Done! Whos next?" + "</h2>");
-			$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+			$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+			$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 			$("#OpBanner1").hide();
 		}
 
@@ -455,8 +456,8 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 		if (char3Life <= 0) {//luke
 			$(r1col3).hide(3000);
 			$("#clicker1").off("click");
-			$("#battleUpdate").replaceWith("<h2>" + "Click Reset to play again." + "</h2>");
-			$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+			$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+			$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 			r2col2.hide();//hide other characters
 			r2col4.hide();
 			optionLuke = false;
@@ -464,8 +465,8 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 		if (char1Life <= 0) {//defender with clicker
 			$(r1col1).hide(3000);
 			$("#clicker1").off("click");
-			$("#battleUpdate").replaceWith("<h2>" + "Well Done! Whos next?" + "</h2>");
-			$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+			$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+			$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 			$("#OpBanner1").hide();
 		}
 	}
@@ -497,8 +498,8 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 		if (char4Life <= 0) {//villain
 			$(r1col4).hide(3000);
 			$("#clicker1").off("click");
-			$("#battleUpdate").replaceWith("<h2>" + "Click Reset to play again." + "</h2>");
-			$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+			$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+			$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 			r2col2.hide();//hide other characters
 			r2col3.hide();
 			optionVillain = false;
@@ -506,8 +507,8 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 		if (char1Life <= 0) {//defender with clicker
 			$(r1col1).hide(3000);
 			$("#clicker1").off("click");
-			$("#battleUpdate").replaceWith("<h2>" + "Well Done! Whos next?" + "</h2>");
-			$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+			$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+			$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 			$("#OpBanner1").hide();
 		}
 	}
@@ -521,10 +522,10 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 	$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack);
 
 	//chosen darth
+			$("#whosBattle").html("Battle in progress... darth vs jedi");
 
 			jediCounter=10;
 		if ((redJedi == true) && (optionDarth == true)) {
-			$("#whosBattle").html("Battle in progress... darth vs jedi");
 		
 			getRandomDarth();
 			getRandomJedi();
@@ -549,8 +550,8 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 			if (char1Life <= 0) {//darth (1)
 					$(r1col1).hide(3000);
 					$("#clicker2").off("click");
-					$("#battleUpdate").replaceWith("<h2>" + "Click Reset to play again." + "</h2>");
-					$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+					$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					r2col3.hide();//hide other characters
 					r2col4.hide();
 					optionDarth = false;
@@ -558,8 +559,8 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 			if (char2Life <= 0) {//defender with clicker jedi (2)
 					$(r1col2).hide(3000);
 					$("#clicker2").off("click");
-					$("#battleUpdate").replaceWith("<h2>" + "Well Done! Whos next?" + "</h2>");
-					$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+					$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner2").hide();
 			}
 
@@ -570,9 +571,9 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 $("#clicker2").on("click", function() { //defender jedi ------------------------
 
 	//chosen luke
+		$("#whosBattle").html("Battle in progress... luke vs jedi");
 
 	if ((redJedi == true) && (optionLuke == true)) {
-		$("#whosBattle").html("Battle in progress... luke vs jedi");
 
 		getRandomLuke();
 		getRandomJedi();
@@ -595,8 +596,8 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 			if (char3Life <= 0) {//luke (3)
 					$(r1col3).hide(3000);
 					$("#clicker2").off("click");
-					$("#battleUpdate").replaceWith("<h2>" + "Click Reset to play again." + "</h2>");
-					$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+					$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					r2col1.hide();//hide other characters
 					r2col4.hide();
 					optionLuke = false;
@@ -604,8 +605,8 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 			if (char2Life <= 0) {//defender with clicker jedi (2)
 					$(r1col2).hide(3000);
 					$("#clicker2").off("click");
-					$("#battleUpdate").replaceWith("<h2>" + "Well Done! Whos next?" + "</h2>");
-					$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+					$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner2").hide();
 			} 
 	}
@@ -639,8 +640,8 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 			if (char4Life <= 0) {//villain (4)
 					$(r1col4).hide(3000);
 					$("#clicker2").off("click");
-					$("#battleUpdate").replaceWith("<h2>" + "Click Reset to play again." + "</h2>");
-					$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+					$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					r2col1.hide();//hide other characters
 					r2col3.hide();
 					optionVillain = false;
@@ -648,8 +649,8 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 			if (char2Life <= 0) {//defender with clicker jedi (2)
 					$(r1col2).hide(3000);
 					$("#clicker2").off("click");
-					$("#battleUpdate").replaceWith("<h2>" + "Well Done! Whos next?" + "</h2>");
-					$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+					$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner2").hide();
 			} 
 	}
@@ -692,8 +693,8 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 			if (char1Life <= 0) {//darth (1)
 					$(r1col1).hide(3000);
 					$("#clicker3").off("click");
-					$("#battleUpdate").replaceWith("<h2>" + "Click Reset to play again." + "</h2>");
-					$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+					$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					r2col2.hide();//hide other characters
 					r2col4.hide();
 					optionDarth=false;
@@ -701,8 +702,8 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 			if (char3Life <= 0) {//defender with clicker luke (3)
 					$(r1col3).hide(3000);
 					$("#clicker3").off("click");
-					$("#battleUpdate").replaceWith("<h2>" + "Well Done! Whos next?" + "</h2>");
-					$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+					$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner3").hide();
 			} 
 
@@ -738,8 +739,8 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 			if (char2Life <= 0) {//jedi (2)
 					$(r1col2).hide(3000);
 					$("#clicker3").off("click");
-					$("#battleUpdate").replaceWith("<h2>" + "Click Reset to play again." + "</h2>");
-					$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+					$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					r2col1.hide();//hide other characters
 					r2col4.hide();
 					optionJedi = false;
@@ -747,8 +748,8 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 			if (char3Life <= 0) {//defender with clicker luke (3)
 					$(r1col3).hide(3000);
 					$("#clicker3").off("click");
-					$("#battleUpdate").replaceWith("<h2>" + "Well Done! Whos next?" + "</h2>");
-					$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+					$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner3").hide();
 		}
 	}
@@ -782,8 +783,8 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 		if (char4Life <= 0) {//villain (4)
 				$(r1col4).hide(3000);
 				$("#clicker3").off("click");
-				$("#battleUpdate").replaceWith("<h2>" + "Click Reset to play again." + "</h2>");
-				$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+				$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+				$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 				r2col1.hide();//hide other characters
 				r2col2.hide();
 				optionVillain = false;
@@ -791,8 +792,8 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 		if (char3Life <= 0) {//defender with clicker luke (3)
 				$(r1col3).hide(3000);
 				$("#clicker3").off("click");
-				$("#battleUpdate").replaceWith("<h2>" + "Well Done! Whos next?" + "</h2>");
-				$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+				$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+				$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 				$("#OpBanner3").hide();
 		} 
 	}
@@ -831,8 +832,8 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 		if (char1Life <= 0) {//darth (1)
 				$(r1col1).hide(3000);
 				$("#clicker4").off("click");
-				$("#battleUpdate").replaceWith("<h2>" + "Click Reset to play again." + "</h2>");
-				$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+				$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+				$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 				r2col3.hide();//hide other characters
 				r2col2.hide();
 				optionDarth = false;
@@ -840,8 +841,8 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 		if (char4Life <= 0) {//defender with clicker villain (4)
 				$(r1col4).hide(3000);
 				$("#clicker4").off("click");
-				$("#battleUpdate").replaceWith("<h2>" + "Well Done! Whos next?" + "</h2>");
-				$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+				$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+				$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 				$("#OpBanner4").hide();
 		}
 	}
@@ -874,8 +875,8 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 		if (char2Life <= 0) {//jedi (2)
 				$(r1col2).hide(3000);
 				$("#clicker4").off("click");
-				$("#battleUpdate").replaceWith("<h2>" + "Click Reset to play again." + "</h2>");
-				$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+				$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+				$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 				r2col3.hide();//hide other characters
 				r2col2.hide();
 				optionJedi = false;
@@ -883,8 +884,8 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 		if (char4Life <= 0) {//defender with clicker villain (4)
 				$(r1col4).hide(3000);
 				$("#clicker4").off("click");
-				$("#battleUpdate").replaceWith("<h2>" + "Well Done! Whos next?" + "</h2>");
-				$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+				$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+				$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 				$("#OpBanner4").hide();
 		}
 	}
@@ -918,8 +919,8 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 			if (char3Life <= 0) {//luke (3)
 					$(r1col3).hide(3000);
 					$("#clicker4").off("click");
-					$("#battleUpdate").replaceWith("<h2>" + "Click Reset to play again." + "</h2>");
-					$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+					$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					r2col1.hide();//hide other characters
 					r2col2.hide();
 					optionLuke = false;
@@ -927,8 +928,8 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 			if (char4Life <= 0) {//defender with clicker villain (4)
 					$(r1col4).hide(3000);
 					$("#clicker4").off("click");
-					$("#battleUpdate").replaceWith("<h2>" + "Well Done! Whos next?" + "</h2>");
-					$("#whosBattle").replaceWith("<h2>" + "Fierce Battle!" + "</h2>");
+					$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner4").hide();
 			}
 	}
@@ -948,7 +949,6 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 //   var min = 0, max =9;
 //   alert(Math.floor(Math.random() * (max - min + 1)) + min);
 // }
-
 
 
 
