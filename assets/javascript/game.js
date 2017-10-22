@@ -4,11 +4,27 @@ darthAttack = 2;
 jediAttack = 3;
 lukeAttack = 4;
 villainAttack = 4;
+char1Life = 200;
+char2Life = 180;
+char3Life = 150;
+char4Life = 120;
+
+
+var darthCounter = Math.floor(Math.random() * 27) + 4;
+var	jediCounter = Math.floor(Math.random() * 16) + 6;
+var lukeCounter = Math.floor(Math.random() * 26) + 3;
+var villainCounter = Math.floor(Math.random() * 15) + 2;
+
+$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + darthCounter);//these will satisfy #clicker1
+$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack) + "<br>" + "Counter Attack = " + jediCounter;
+$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack) + "<br>" + "Counter Attack = " + lukeCounter;
+$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack) + "<br>" + "Counter Attack = " + villainCounter;
+
+
+
+
+
 // set variables, each character will get a life value
-var char1Life = " hp: " + 200 + "<br>" + "Attack Points = " + darthAttack;//is there a better way to code this? What would a pro developer do?
-var char2Life = " hp: " + 180 + "<br>" + "Attack Points = " + jediAttack;
-var char3Life = " hp: " + 150 + "<br>" + "Attack Points = " + lukeAttack;
-var char4Life = " hp: " + 120 + "<br>" + "Attack Points = " + villainAttack;
 //these will chose random attack level from attack arrays
 var darth = '<img id="darth" class="life1" src="assets/images/darth.jpeg" />';
 var jedi = '<img id="jedi" class="life2" src="assets/images/jedi.jpg" />';
@@ -77,6 +93,11 @@ var villain = '<img id="villain" class="life4" src="assets/images/villain.jpg" /
 		 char2Life = 180;
 		 char3Life = 150;
 		 char4Life = 120;
+		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + darthCounter);//these will satisfy #clicker1
+		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack) + "<br>" + "Counter Attack = " + jediCounter;
+		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack) + "<br>" + "Counter Attack = " + lukeCounter;
+		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack) + "<br>" + "Counter Attack = " + villainCounter;
+
 
 		$("#selectYourCharacter").hide();
 		$("#selectYourCharacter").hide();
@@ -364,82 +385,82 @@ function getRandomVillain() {
 
 /////////////////////////////*********************** MARKER FOR BATTLE CODES *********************************/////////////////
 
-	
 
 console.log(darthAttack);
 
 $("#clicker1").on("click", function() { //defender darth ------------------------
 
-		$("#whosBattle").html("Battle in progress... jedi vs darth");
+
+		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + darthCounter);//these will satisfy #clicker1
+		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack) + "<br>" + "Counter Attack = " + jediCounter;
+		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack) + "<br>" + "Counter Attack = " + lukeCounter;
+		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack) + "<br>" + "Counter Attack = " + villainCounter;
 
 
-	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);//these will satisfy #clicker1
-	$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack);
-	$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack);
-	$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack);
+	
+	if  ((redDarth == true) && (optionJedi == true)) {
+		// $("#whosBattle").html("Battle in progress... jedi vs darth");
+
+			// $("#battleUpdate").html("Darth attacked with " + darthAttack + " damage points! " + "<br>" + "Jedi fought back with " + jediAttack + " damage points!");
+			
+			
+			// if (darthAttack > jediAttack) {
+			// 	char2Life -= darthAttack - jediAttack;
+				getRandomDarth();
+				getRandomJedi();
+
+				$("#whosBattle").html("Battle in progress... jedi vs darth");
+
+				char2Life-= darthCounter;
+
+				char1Life-= jediAttack;
+				console.log(" darth counter attack =" + darthCounter);
+				console.log("darth attack " + darthAttack);
 
 
-	getRandomDarth();
-	getRandomJedi();
+				console.log("jedi " + char2Life);
+				console.log("darth " + char1Life);
+			// } else if (darthAttack < jediAttack) {
+			// 	char1Life -= jediAttack - darthAttack;
 
-	darthCounter = 15;
-	char2Life-= darthCounter;
+			// 	console.log("darth " + char1Life);
+			// 	console.log("jedi " + char2Life);
+			
+			// } 
 
-	char1Life-= jediAttack;
-	console.log(" darth counter attack =" + darthCounter);
-	console.log("darth attack " + darthAttack);
-
-
-	// if  ((redDarth == true) && (optionJedi == true)) {
-	// $("#whosBattle").html("Battle in progress... jedi vs darth");
-
-		// $("#battleUpdate").html("Darth attacked with " + darthAttack + " damage points! " + "<br>" + "Jedi fought back with " + jediAttack + " damage points!");
-		
-		
-		// if (darthAttack > jediAttack) {
-		// 	char2Life -= darthAttack - jediAttack;
-			console.log("jedi " + char2Life);
-			console.log("darth " + char1Life);
-		// } else if (darthAttack < jediAttack) {
-		// 	char1Life -= jediAttack - darthAttack;
-
-		// 	console.log("darth " + char1Life);
-		// 	console.log("jedi " + char2Life);
-		
-		// } 
-
-		if (char2Life <= 0) {//jedi
-			$(r1col2).hide(3000);
-			$("#clicker1").off("click");
-			$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
-			$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
-			r2col3.hide();//hide other characters
-			r2col4.hide();
-			optionJedi = false;
-		}
-		if (char1Life <= 0) {//defender with clicker
-			$(r1col1).hide(3000);
-			$("#clicker1").off("click");
-			$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
-			$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
-			$("#OpBanner1").hide();
-		}
-
+			if (char2Life <= 0) {//jedi
+				$(r1col2).hide(3000);
+				$("#clicker1").off("click");
+				$("#battleUpdate").html("<h2>" + "Click Reset to play again." + "</h2>");
+				$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
+				r2col3.hide();//hide other characters
+				r2col4.hide();
+				optionJedi = false;
+			}
+			if (char1Life <= 0) {//defender with clicker
+				$(r1col1).hide(3000);
+				$("#clicker1").off("click");
+				$("#battleUpdate").html("<h2>" + "Well Done! Whos next?" + "</h2>");
+				$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
+				$("#OpBanner1").hide();
+			}
+	}
 
 });
 
 $("#clicker1").on("click", function() { //defender darth ------------------------
 
 
-		char3Life-= darthCounter;
-		char1Life-= lukeAttack;
+			
 
-	// if ((redDarth == true) && (optionLuke == true)) {
-	$("#whosBattle").html("Battle in progress... luke vs darth");
+	if ((redDarth == true) && (optionLuke == true)) {
+			$("#whosBattle").html("Battle in progress... luke vs darth");
 
 			getRandomDarth();
 			getRandomLuke();
-			
+			char3Life-= darthCounter;
+			char1Life-= lukeAttack;
+
 			
 		// $("#battleUpdate").html("Darth attacked with " + darthAttack + " damage points! " + "<br>" + "Luke fought back with " + lukeAttack + " damage points!");
 
@@ -469,20 +490,20 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 			$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 			$("#OpBanner1").hide();
 		}
-	
+	}
 });
 
 $("#clicker1").on("click", function() { //defender darth ------------------------
 
-	char4Life -= darthCounter;
-	// if ((redDarth == true) && (optionVillain == true)) {
-	$("#whosBattle").html("Battle in progress... villain vs darth");
+	if ((redDarth == true) && (optionVillain == true)) {
+			$("#whosBattle").html("Battle in progress... villain vs darth");
+	// char4Life -= darthCounter;
 
-			getRandomDarth();
-			getRandomVillain();
-			char4Life-= darthCounter;
-			char1Life-= villainAttack;
-	
+				getRandomDarth();
+				getRandomVillain();
+				char4Life-= darthCounter;
+				char1Life-= villainAttack;
+		
 			// $("#battleUpdate").html("Darth attacked with " + darthAttack + " damage points! " + "<br>" + "Villain fought back with " + villainAttack + " damage points!");
 
 		// if (darthAttack > villainAttack) {
@@ -511,21 +532,23 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 			$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 			$("#OpBanner1").hide();
 		}
-	
+	}
 });
+
 
 $("#clicker2").on("click", function() { //defender jedi ------------------------
 
-	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);// these codes for clicker2
-	$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack);
-	$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack);
-	$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack);
+		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + darthCounter);//these will satisfy #clicker1
+		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack) + "<br>" + "Counter Attack = " + jediCounter;
+		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack) + "<br>" + "Counter Attack = " + lukeCounter;
+		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack) + "<br>" + "Counter Attack = " + villainCounter;
+
 
 	//chosen darth
 			$("#whosBattle").html("Battle in progress... darth vs jedi");
 
-			jediCounter=10;
-		// if ((redJedi == true) && (optionDarth == true)) {
+			
+		if ((redJedi == true) && (optionDarth == true)) {
 		
 			getRandomDarth();
 			getRandomJedi();
@@ -564,16 +587,17 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 					$("#OpBanner2").hide();
 			}
 
-		
+		}
 
 });
 
 $("#clicker2").on("click", function() { //defender jedi ------------------------
 
 	//chosen luke
-		$("#whosBattle").html("Battle in progress... luke vs jedi");
 
-	// if ((redJedi == true) && (optionLuke == true)) {
+	if ((redJedi == true) && (optionLuke == true)) {
+		
+		$("#whosBattle").html("Battle in progress... luke vs jedi");
 
 		getRandomLuke();
 		getRandomJedi();
@@ -609,14 +633,14 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner2").hide();
 			} 
-	
+	}
 });
 
 $("#clicker2").on("click", function() { //defender jedi ------------------------
 
 	//chosen villain
 
-	// if ((redJedi == true) && (optionVillain == true)) {
+	if ((redJedi == true) && (optionVillain == true)) {
 		$("#whosBattle").html("Battle in progress... villain vs jedi");
 
 		getRandomVillain();
@@ -653,7 +677,7 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner2").hide();
 			} 
-	
+	}
 });
 // darth char1Life 
 // jedi char2Life
@@ -662,14 +686,16 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 
 $("#clicker3").on("click", function() { //defender luke ------------------------
 
-	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);//these codes for clicker3
-	$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack);
-	$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack);
-	$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack);
+	
+		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + darthCounter);//these will satisfy #clicker1
+		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack) + "<br>" + "Counter Attack = " + jediCounter;
+		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack) + "<br>" + "Counter Attack = " + lukeCounter;
+		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack) + "<br>" + "Counter Attack = " + villainCounter;
+
 
 	//chosen darth
-	lukeCounter=19;
-	// if ((redLuke == true) && (optionDarth == true)) {
+	
+	if ((redLuke == true) && (optionDarth == true)) {
 		$("#whosBattle").html("Battle in progress... darth vs luke");
 		
 		getRandomDarth();
@@ -707,7 +733,7 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 					$("#OpBanner3").hide();
 			} 
 
-
+	}
 	
 });
 
@@ -715,7 +741,7 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 
 //chosen jedi
 
-	// if ((redLuke == true) && (optionJedi == true)) {
+	if ((redLuke == true) && (optionJedi == true)) {
 		$("#whosBattle").html("Battle in progress... jedi vs luke");
 
 		getRandomJedi();
@@ -752,7 +778,7 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner3").hide();
 		}
-	
+	}
 });
 
 $("#clicker3").on("click", function() { //defender luke ------------------------
@@ -801,18 +827,21 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 
 $("#clicker4").on("click", function() { //defender villain ------------------------
 
-	$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack);//these codes for clicker4
-	$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack);
-	$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack);
-	$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack);
+	
+		$(".life1").html(" hp: " + char1Life + "<br>" + "Attack Points = " + darthAttack + "<br>" + "Counter Attack = " + darthCounter);//these will satisfy #clicker1
+		$(".life2").html(" hp: " + char2Life + "<br>" + "Attack Points = " + jediAttack) + "<br>" + "Counter Attack = " + jediCounter;
+		$(".life3").html(" hp: " + char3Life + "<br>" + "Attack Points = " + lukeAttack) + "<br>" + "Counter Attack = " + lukeCounter;
+		$(".life4").html(" hp: " + char4Life + "<br>" + "Attack Points = " + villainAttack) + "<br>" + "Counter Attack = " + villainCounter;
+
 
 	//chosen darth
-		villainCounter=12;
-	// if ((redVillain == true) && (optionDarth == true)) {
+		
+	if ((redVillain == true) && (optionDarth == true)) {
 		$("#whosBattle").html("Battle in progress... darth vs villain");
 	
 		getRandomDarth();
 		getRandomVillain();
+		console.log(villainCounter);
 		console.log("villain attack: " + villainAttack);
 		console.log("darth attack: " + darthAttack);
 		char1Life-= villainCounter;
@@ -845,14 +874,14 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 				$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 				$("#OpBanner4").hide();
 		}
-	
+	}
 });
 
 $("#clicker4").on("click", function() { //defender villain ------------------------
 
 	//chosen jedi
 
-	// if ((redVillain == true) && (optionJedi == true)) {
+	if ((redVillain == true) && (optionJedi == true)) {
 		$("#whosBattle").html("Battle in progress... jedi vs villain");
 
 		getRandomJedi();
@@ -888,14 +917,14 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 				$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 				$("#OpBanner4").hide();
 		}
-	
+	}
 });
 
 $("#clicker4").on("click", function() { //defender villain ------------------------
 
 	//chosen luke
 
-	// if ((redVillain == true) && (optionLuke == true)) {
+	if ((redVillain == true) && (optionLuke == true)) {
 		$("#whosBattle").html("Battle in progress... luke vs villain");
 		
 		getRandomLuke();
@@ -932,7 +961,7 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner4").hide();
 			}
-	
+	}
 });
 
 
