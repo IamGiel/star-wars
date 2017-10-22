@@ -431,16 +431,16 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 $("#clicker1").on("click", function() { //defender darth ------------------------
 
 
+		char3Life-= darthCounter;
+		char1Life-= lukeAttack;
 
-
-	if ((redDarth == true) && (optionLuke == true)) {
+	// if ((redDarth == true) && (optionLuke == true)) {
 	$("#whosBattle").html("Battle in progress... luke vs darth");
 
 			getRandomDarth();
 			getRandomLuke();
 			
-			char3Life-= darthCounter;
-			char1Life-= lukeAttack;
+			
 		// $("#battleUpdate").html("Darth attacked with " + darthAttack + " damage points! " + "<br>" + "Luke fought back with " + lukeAttack + " damage points!");
 
 		// if (darthAttack > lukeAttack) {
@@ -469,13 +469,13 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 			$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 			$("#OpBanner1").hide();
 		}
-	}
+	
 });
 
 $("#clicker1").on("click", function() { //defender darth ------------------------
 
 	char4Life -= darthCounter;
-	if ((redDarth == true) && (optionVillain == true)) {
+	// if ((redDarth == true) && (optionVillain == true)) {
 	$("#whosBattle").html("Battle in progress... villain vs darth");
 
 			getRandomDarth();
@@ -511,7 +511,7 @@ $("#clicker1").on("click", function() { //defender darth -----------------------
 			$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 			$("#OpBanner1").hide();
 		}
-	}
+	
 });
 
 $("#clicker2").on("click", function() { //defender jedi ------------------------
@@ -525,7 +525,7 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 			$("#whosBattle").html("Battle in progress... darth vs jedi");
 
 			jediCounter=10;
-		if ((redJedi == true) && (optionDarth == true)) {
+		// if ((redJedi == true) && (optionDarth == true)) {
 		
 			getRandomDarth();
 			getRandomJedi();
@@ -564,7 +564,7 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 					$("#OpBanner2").hide();
 			}
 
-		}
+		
 
 });
 
@@ -573,7 +573,7 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 	//chosen luke
 		$("#whosBattle").html("Battle in progress... luke vs jedi");
 
-	if ((redJedi == true) && (optionLuke == true)) {
+	// if ((redJedi == true) && (optionLuke == true)) {
 
 		getRandomLuke();
 		getRandomJedi();
@@ -609,14 +609,14 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner2").hide();
 			} 
-	}
+	
 });
 
 $("#clicker2").on("click", function() { //defender jedi ------------------------
 
 	//chosen villain
 
-	if ((redJedi == true) && (optionVillain == true)) {
+	// if ((redJedi == true) && (optionVillain == true)) {
 		$("#whosBattle").html("Battle in progress... villain vs jedi");
 
 		getRandomVillain();
@@ -653,7 +653,7 @@ $("#clicker2").on("click", function() { //defender jedi ------------------------
 					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner2").hide();
 			} 
-	}
+	
 });
 // darth char1Life 
 // jedi char2Life
@@ -669,7 +669,7 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 
 	//chosen darth
 	lukeCounter=19;
-	if ((redLuke == true) && (optionDarth == true)) {
+	// if ((redLuke == true) && (optionDarth == true)) {
 		$("#whosBattle").html("Battle in progress... darth vs luke");
 		
 		getRandomDarth();
@@ -708,14 +708,14 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 			} 
 
 
-	}
+	
 });
 
 $("#clicker3").on("click", function() { //defender luke ------------------------
 
 //chosen jedi
 
-	if ((redLuke == true) && (optionJedi == true)) {
+	// if ((redLuke == true) && (optionJedi == true)) {
 		$("#whosBattle").html("Battle in progress... jedi vs luke");
 
 		getRandomJedi();
@@ -752,7 +752,7 @@ $("#clicker3").on("click", function() { //defender luke ------------------------
 					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner3").hide();
 		}
-	}
+	
 });
 
 $("#clicker3").on("click", function() { //defender luke ------------------------
@@ -808,7 +808,7 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 
 	//chosen darth
 		villainCounter=12;
-	if ((redVillain == true) && (optionDarth == true)) {
+	// if ((redVillain == true) && (optionDarth == true)) {
 		$("#whosBattle").html("Battle in progress... darth vs villain");
 	
 		getRandomDarth();
@@ -845,14 +845,14 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 				$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 				$("#OpBanner4").hide();
 		}
-	}
+	
 });
 
 $("#clicker4").on("click", function() { //defender villain ------------------------
 
 	//chosen jedi
 
-	if ((redVillain == true) && (optionJedi == true)) {
+	// if ((redVillain == true) && (optionJedi == true)) {
 		$("#whosBattle").html("Battle in progress... jedi vs villain");
 
 		getRandomJedi();
@@ -888,14 +888,14 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 				$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 				$("#OpBanner4").hide();
 		}
-	}
+	
 });
 
 $("#clicker4").on("click", function() { //defender villain ------------------------
 
 	//chosen luke
 
-	if ((redVillain == true) && (optionLuke == true)) {
+	// if ((redVillain == true) && (optionLuke == true)) {
 		$("#whosBattle").html("Battle in progress... luke vs villain");
 		
 		getRandomLuke();
@@ -932,7 +932,7 @@ $("#clicker4").on("click", function() { //defender villain ---------------------
 					$("#whosBattle").html("<h2>" + "Fierce Battle!" + "</h2>");
 					$("#OpBanner4").hide();
 			}
-	}
+	
 });
 
 
