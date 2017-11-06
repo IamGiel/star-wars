@@ -27,7 +27,7 @@ var villainAttack = Math.floor(Math.random() * 6) + 1;
 //these will chose random attack level from attack arrays
 var darth = '<img id="darth" class="life1" src="assets/images/darth.jpeg" />';
 var jedi = '<img id="jedi" class="life2" src="assets/images/jedi.jpg" />';
-var luke = '<img id="luke" class="life3" src="assets/images/luke.jpg" />';
+var luke = '<img id="luke" class="life3" src="assets/images/lukeSky.jpg" />';
 var villain = '<img id="villain" class="life4" src="assets/images/villain.jpg" />';
 
 
