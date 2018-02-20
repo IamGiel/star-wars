@@ -1,7 +1,9 @@
-# star-wars
+
 ## STAR WARS RPG
-### Probably one of the most exciting application feat I made as I learned javascript.  
-**The app uses plain vanilla js**
+### First attempt at javascript and jQuery
+
+
+Left it here as a reminder of the struggles I had with creating a game application with javascript and jquery.  The game works but needs 
 
 
 play it at: [star wars]( https://iamgiel.github.io/star-wars/)
