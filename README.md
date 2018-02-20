@@ -9,6 +9,6 @@ play it at: [star wars]( https://iamgiel.github.io/star-wars/)
 
  My first experience creating a game application with javascript and jquery.  I left it here intentionally for self-assessment, and a future teaching tool for new coders.
 
-As I rewrite this piece and correct repetitive and unnecessary codes, I plan to document what I find are common errors in a beginner may face concerning rules of javascript.
+As I rewrite this piece and correct repetitive and unnecessary codes, I plan to document what I find are common errors that a beginner may encounter concerning rules of javascript.
 
 
